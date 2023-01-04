@@ -1,0 +1,95 @@
+Received: from zvexch5.IT.lan (10.5.7.75) by zvexch5.IT.lan (10.5.7.75) with
+Microsoft SMTP Server (version=TLS1_2,
+cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.2507.16 via
+Mailbox Transport; Wed, 9 Nov 2022 13:14:51 +0100
+Received: from zvexch7.IT.lan (10.5.7.77) by zvexch5.IT.lan (10.5.7.75) with
+Microsoft SMTP Server (version=TLS1_2,
+cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.2507.16; Wed, 9
+Nov 2022 13:14:51 +0100
+Received: from b1801.mx.srv.dfn.de (10.5.7.122) by smtp.hs-duesseldorf.de
+(10.5.7.77) with Microsoft SMTP Server (version=TLS1_2,
+cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.2507.16 via
+Frontend Transport; Wed, 9 Nov 2022 13:14:51 +0100
+X-Virus-Scanned: Debian amavisd-new at mgw4-tub.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: -3.758
+X-Spam-Level:
+X-Spam-Status: No, score=-3.758 tagged_above=-200 required=6.2
+    tests=[BAYES_00=-3.9, BOGO_UNSURE=0.1, BT_80=0.01, DKIM_SIGNED=0.1,
+    DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1, DKIM_VALID_EF=-0.1,
+    FREEMAIL_ENVFROM_END_DIGIT=0.25, FREEMAIL_FROM=0.001,
+    HTML_MESSAGE=0.001, SPF_HELO_PASS=-0.01, SPF_PASS=-0.01]
+    autolearn=no autolearn_force=no
+Authentication-Results: mgw4-tub.srv.dfn.de (amavisd-new);
+    dkim=pass (2048-bit key) header.d=fastmail.com header.b=vIfMJlat;
+    dkim=pass (2048-bit key) header.d=messagingengine.com
+    header.b=uDb2IbFQ
+Received: from wnew3-smtp.messagingengine.com (wnew3-smtp.messagingengine.com [64.147.123.17])
+    by b1801.mx.srv.dfn.de (Postfix) with ESMTPS id B5CE5144
+    for <joerg.cosfeld@hs-duesseldorf.de>; Wed,  9 Nov 2022 13:14:40 +0100 (CET)
+Received: from compute3.internal (compute3.nyi.internal [10.202.2.43])
+    by mailnew.west.internal (Postfix) with ESMTP id B93982B06A18
+    for <joerg.cosfeld@hs-duesseldorf.de>; Wed,  9 Nov 2022 07:14:29 -0500 (EST)
+Received: from imap46 ([10.202.2.96])
+  by compute3.internal (MEProxy); Wed, 09 Nov 2022 07:14:29 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fastmail.com; h=
+    cc:content-type:date:date:from:from:in-reply-to:in-reply-to
+    :message-id:mime-version:references:reply-to:sender:subject
+    :subject:to:to; s=fm1; t=1667996069; x=1667996669; bh=shM5rHWzIy
+    iFofQ2z4mxvRCQsgQN3A98QUAzJ8jcPO0=; b=vIfMJlath7LUz9LyNtvBjs5S3P
+    JNElQiGEx/XVzb9rLC2rU1bYC8oJKwYqvwQymt3/Wgmu9Jjnt17lK2U+Ug3o3v67
+    +NSpWGGYuYbDMXdLA1bDL8suIDM+HK8WnY376cKJ2AENsA77KtN1pSlJ8ljWdK9E
+    i2mzDLrBko72b8vXrjbBb9VxUnTIphm9vyA0xNcQOV/MNRnLp7bfXeeWFU8Ihxv6
+    JfMopYjRilhvUjF6BLsJhdIjl3mOwyY/cv9WevevSvCxbljRqI+2i0AMp+uaj2nt
+    lhJdMJZIzbVViAQ0q/tXDUB3jjKRmIpCHt8zrkksp4AsvaG85DcfezQr7BoQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+    messagingengine.com; h=cc:content-type:date:date:feedback-id
+    :feedback-id:from:from:in-reply-to:in-reply-to:message-id
+    :mime-version:references:reply-to:sender:subject:subject:to:to
+    :x-me-proxy:x-me-proxy:x-me-sender:x-me-sender:x-sasl-enc; s=
+    i35d941ae.fm1; t=1667996069; x=1667996669; bh=shM5rHWzIyiFofQ2z4
+    mxvRCQsgQN3A98QUAzJ8jcPO0=; b=uDb2IbFQoYcFLBO7AEhhgxbs/cDY0WK5te
+    h4ZEhum2SGn1MjQNl5yIA0TQQlQLCfskz0+KJ1aE0kzM9tcnCtKi/q+X+CUihRCB
+    pf+IMo9W8E59D9BYJ2VZX9Kl48C1ul17+cFUKd8UHD5+mVTnIayPJskblvzSb2E4
+    V6jJN6aWn9rOrZ2i8NQJ5jS7BJUFTFFUc1Dbg+I6v6XBzFiYV51GwhL8TCPALnoV
+    pTE72NCevhPpstN65ZB9yoUMvpiue70rUa7ngGjXNYx6fMnql+ZTAci8wtLLXIm1
+    Y7yvaEjCyGiy56EWdq/4mxfGPQ5ncyQxJVRbDuP+/lKO5/yq9Drg==
+X-ME-Sender: <xms:pJlrY3aKuOK7LQrL4_BgEsRVIDZOjdvpY5oLLH5dZhlpr2dpFEmRJQ>
+    <xme:pJlrY2YUt5W3x9fR_ST78f_eq5haj6X6vrsnxVtDZDI5ZMrq3JOJyZ5CKOutLuFC4
+    3SzPyDHSB_Ni_M4lQY>
+X-ME-Proxy-Cause: gggruggvucftvghtrhhoucdtuddrgedvgedrfedvgdefiecutefuodetggdotefrodftvf
+    curfhrohhfihhlvgemucfhrghsthforghilhdpqfgfvfdpuffrtefokffrpgfnqfghnecu
+    uegrihhlohhuthemuceftddtnecunecujfgurhepofgfggfkjghffffhvffutgesrgdtre
+    erreerjeenucfhrhhomhepghhrihhtthihrdhsrghlthekudeljeesfhgrshhtmhgrihhl
+    rdgtohhmnecuggftrfgrthhtvghrnheptefgiefhieekuefgvdekfeektddvudeghfejgf
+    euhfeuvdeufeeutdduhffhjeejnecuffhomhgrihhnpehrphdqohhnlhhinhgvrdguvgdp
+    rhhhvghinhhishgthhgvphhoshhtmhgvughivghnghhruhhpphgvrdguvgdpthifihhtth
+    gvrhdrtghomhdpfhgrtggvsghoohhkrdgtohhmnecuvehluhhsthgvrhfuihiivgeptden
+    ucfrrghrrghmpehmrghilhhfrhhomhepghhrihhtthihrdhsrghlthekudeljeesfhgrsh
+    htmhgrihhlrdgtohhm
+X-ME-Proxy: <xmx:pZlrY5-rr3TdaldTLr9290tNMgku_S1JSyU23iTODLyLp941jKf73w>
+    <xmx:pZlrY9pYdODqyQwF-rEzOp1IHzD3kmjTSeql4u4hiv2hH7ZS0sQ0uA>
+    <xmx:pZlrYyp1mUqyA37NavUzi0wgVpBwKbRSB6-kkWNM8dlktPzbwHQ3jw>
+    <xmx:pZlrY_2NJ7GugpNlshnu9MrR0ZS6acqYZbLgEqWIi-EO-WzgfVDDlakW4pcId4c6>
+Feedback-ID: i35d941ae:Fastmail
+Received: by mailuser.nyi.internal (Postfix, from userid 501)
+    id E29B72A20080; Wed,  9 Nov 2022 07:14:28 -0500 (EST)
+X-Mailer: MessagingEngine.com Webmail Interface
+User-Agent: Cyrus-JMAP/3.7.0-alpha0-1115-g8b801eadce-fm-20221102.001-g8b801ead
+Mime-Version: 1.0
+Message-Id: <bd3d7f89-034f-480b-9b42-40c3ddf9da9c@app.fastmail.com>
+In-Reply-To: <8a9247ccfed144df8a8f52459716cf4d@hs-duesseldorf.de>
+References: <8a9247ccfed144df8a8f52459716cf4d@hs-duesseldorf.de>
+Date: Wed, 09 Nov 2022 13:13:57 +0100
+From: gritty.salt8197@fastmail.com
+To: =?UTF-8?Q?Cosfeld=2C_J=C3=B6rg?= <joerg.cosfeld@hs-duesseldorf.de>
+Subject: Re: Test Mail
+Content-Type: multipart/alternative;
+boundary=3d0aa3dba4c94b9eb14664dc4047aa6f
+Return-Path: gritty.salt8197@fastmail.com
+X-MS-Exchange-Organization-Network-Message-Id: 79840812-4262-4ba7-46c6-08dac24c00a7
+X-MS-Exchange-Organization-AVStamp-Enterprise: 1.0
+X-MS-Exchange-Organization-AuthSource: zvexch7.IT.lan
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.3032223
+X-MS-Exchange-Processed-By-BccFoldering: 15.01.2507.016

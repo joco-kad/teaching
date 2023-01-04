@@ -1,0 +1,53 @@
+Received: from zvexch7.IT.lan (10.5.7.77) by zvexch5.IT.lan (10.5.7.75) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.2507.16 via
+ Mailbox Transport; Wed, 9 Nov 2022 14:19:15 +0100
+Received: from zvexch6.IT.lan (10.5.7.76) by zvexch7.IT.lan (10.5.7.77) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.2507.16; Wed, 9
+ Nov 2022 14:19:15 +0100
+Received: from b1801.mx.srv.dfn.de (10.5.7.122) by smtp.hs-duesseldorf.de
+ (10.5.7.76) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.2507.16 via
+ Frontend Transport; Wed, 9 Nov 2022 14:19:15 +0100
+X-Virus-Scanned: Debian amavisd-new at mgw4-tub.srv.dfn.de
+X-Spam-Flag: NO
+X-Spam-Score: -0.389
+X-Spam-Level:
+X-Spam-Status: No, score=-0.389 tagged_above=-200 required=6.2
+	tests=[BAYES_40=-0.5, BOGO_UNSURE=0.1, BT_50=0.01, HTML_MESSAGE=0.001,
+	SPF_HELO_NONE=0.01, SPF_PASS=-0.01] autolearn=no autolearn_force=no
+Received: from mail.kunstakademie-duesseldorf.de (mail.kunstakademie-duesseldorf.de [193.175.67.110])
+	by b1801.mx.srv.dfn.de (Postfix) with ESMTPS id 0503E144
+	for <joerg.cosfeld@hs-duesseldorf.de>; Wed,  9 Nov 2022 14:19:12 +0100 (CET)
+Received: from kadEXCH1.kunstakademie.de (10.110.51.22) by
+ kadEXCH1.kunstakademie.de (10.110.51.22) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.2.986.5;
+ Wed, 9 Nov 2022 14:19:11 +0100
+Received: from kadEXCH1.kunstakademie.de ([fe80::ca7:60d0:ab66:2fbf]) by
+ kadEXCH1.kunstakademie.de ([fe80::ca7:60d0:ab66:2fbf%12]) with mapi id
+ 15.02.0986.005; Wed, 9 Nov 2022 14:19:11 +0100
+From: =?iso-8859-1?Q?Cosfeld=2C_J=F6rg?=
+	<joerg.cosfeld@kunstakademie-duesseldorf.de>
+To: "joerg.cosfeld@hs-duesseldorf.de" <joerg.cosfeld@hs-duesseldorf.de>
+Subject: Test Test
+Thread-Topic: Test Test
+Thread-Index: AQHY9D3bd/X9lE31dkaNMIb3Coqh/g==
+Date: Wed, 9 Nov 2022 13:19:11 +0000
+Message-ID: <3f944c161c2a422aba6d2636e1402c4a@kunstakademie-duesseldorf.de>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-originating-ip: [10.110.51.31]
+Content-Type: multipart/related;
+	boundary="_004_3f944c161c2a422aba6d2636e1402c4akunstakademieduesseldor_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+Return-Path: joerg.cosfeld@kunstakademie-duesseldorf.de
+X-MS-Exchange-Organization-Network-Message-Id: ff16f58b-5c07-460b-069f-08dac254fff1
+X-MS-Exchange-Organization-AVStamp-Enterprise: 1.0
+X-MS-Exchange-Organization-AuthSource: zvexch6.IT.lan
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.2786001
+X-MS-Exchange-Processed-By-BccFoldering: 15.01.2507.016
